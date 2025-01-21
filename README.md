@@ -56,7 +56,7 @@ Ensure you have the following installed on your system:
 ### User Routes
 
 #### Register a User
-- **URL:** `/api/auth/register`
+- **URL:** `/api/auth/signup`
 - **Method:** POST
 - **Body:**
   ```json

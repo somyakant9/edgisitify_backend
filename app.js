@@ -5,14 +5,14 @@ const globalErrorHandler = require("./controllers/errControllers");
 const productRouter = require("./routes/productsRoutes");
 const cartRouter = require("./routes/cartRoutes");
 const orderRouter = require("./routes/ordersRoutes");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
-app.get('/',(req,res)=>{
-  console.log('API is running')
+app.get("/", (req, res) => {
+  console.log("API is running");
 });
 app.use("/api/auth", userRouter);
 app.use("/api/products", productRouter);

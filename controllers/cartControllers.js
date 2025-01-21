@@ -44,7 +44,7 @@ exports.getCartItems = catchAsync(async(req,res,next)=>{
     
   // console.log(req);
   const userId = req.user.id;
-    const cartItems = await Cart.find({ userId });
+    const cartItems = await Cart.find({ userId }).populate("productId");
     if(!cartItems){
         return new AppError('No items in the cart.',200);
     };
